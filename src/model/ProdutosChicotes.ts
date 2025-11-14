@@ -1,10 +1,10 @@
-import { Produtos } from "./PRodutos";
+import { Produtos } from "./Produtos";
 
 export class ProdutosChicotes extends Produtos {
 
     private _comprimento: number;
 
-    constructor(id:number, modelo: string, preco: number, estoque:number, categoria: string,comprimento: number) {
+    constructor(id:number, modelo: string, preco: number, estoque:number, categoria: number,comprimento: number) {
         super(id, modelo, preco, estoque,categoria);
         this._comprimento = comprimento;
     }
@@ -18,6 +18,7 @@ export class ProdutosChicotes extends Produtos {
     }
 
     public listar():void {
-        console.log("Comprimento: " + this._comprimento);
+        super.listar();
+        console.log(`Comprimento: ${this._comprimento}`);
     }
 }

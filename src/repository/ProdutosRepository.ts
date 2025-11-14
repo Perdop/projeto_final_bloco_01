@@ -1,12 +1,11 @@
-import { Produtos } from "../model/PRodutos";
+import { Produtos } from "../model/Produtos";
 
 export interface ProdutosRepository {
 
-	procurarModelo(modelo:string): void;
 	listarTodos(): void;
 	cadastrar(produto: Produtos): void;
 	atualizar(produto: Produtos): void;
 	deletar(id: number):void;
 
-	
+
 }

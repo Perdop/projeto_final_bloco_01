@@ -4,9 +4,9 @@ export abstract class Produtos {
     private _modelo: string;
     private _preco: number;
     private _estoque: number;
-    private _categoria: string;
+    private _categoria: number;
     
-    constructor(id:number, modelo: string, preco: number, estoque: number, categoria: string) {
+    constructor(id:number, modelo: string, preco: number, estoque: number, categoria: number) {
         this._id = id;
         this._modelo = modelo;
         this._preco = preco;
@@ -46,11 +46,11 @@ export abstract class Produtos {
         this._preco = preco;
     }
     
-    public get categoria(): string {
+    public get categoria(): number {
         return this._categoria;
     }
 
-    public set categoria(categoria: string) {
+    public set categoria(categoria: number) {
         this._categoria = categoria;
     }
 
@@ -69,7 +69,7 @@ export abstract class Produtos {
     }
 
     public listar():void {
-        console.log(`Produtos:\nModelo do produto: ${this._modelo}\nPreco: ${this.preco}\nEstoque: ${this.estoque}\nCategoria: ${this.categoria}`);
+        console.log(`Produtos:\nId: ${this._id}\nModelo do produto: ${this._modelo}\nPreco: ${this.preco}\nEstoque: ${this.estoque}\nCategoria: ${this.categoria}`);
     }
 
 }   

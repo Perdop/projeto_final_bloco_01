@@ -1,10 +1,10 @@
-import { Produtos } from "./PRodutos";
+import { Produtos } from "./Produtos";
 
 export class ProdutosVolante extends Produtos {
 
     private _diametro: number;
 
-    constructor(id:number, modelo: string, preco: number, estoque: number, categoria: string,comprimento: number, diametro: number ) {
+    constructor(id:number, modelo: string, preco: number, estoque: number, categoria: number, diametro: number ) {
         super(id, modelo, preco, estoque, categoria);
         this._diametro = diametro;
     }
@@ -18,6 +18,7 @@ export class ProdutosVolante extends Produtos {
     }
 
     public listar():void {
+        super.listar();
         console.log(`Diametros: ${this._diametro}`);
     }
 }
