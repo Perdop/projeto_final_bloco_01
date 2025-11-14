@@ -1,12 +1,14 @@
 import { log } from "node:console";
 import readlinesync = require("readline-sync");
 
-const listaOpcoesMenu: string[] = ["Cadastrar Carro", "Cadastrar Peca", "Listar Carro", "Listar Pecas", "Atualizar Carro", "Atualizar Peca", "Excluir Carro", "Excluir Peca", "Sair"];
+const listaOpcoesMenu: string[] = ["Cadastrar Produto", "Listar Produto", "Atualizar Produto", "Excluir Produto", "Sair"];
 
 
 export function main(){
     apresentacaoMarca();
     opcoesMenu(listaOpcoesMenu)
+
+    
     
     while (true) {
         let opcao = questionInt("Selecione a opcao: \n");
@@ -30,26 +32,13 @@ export function main(){
             case 5:
                 console.log("Voce escolheu " + listaOpcoesMenu[4] + " -->\n");
                 break;
-
-            case 6:
-                console.log("Voce escolheu " + listaOpcoesMenu[5] + " -->\n");
-                break;
-
-            case 7:
-                console.log("Voce escolheu " + listaOpcoesMenu[6] + " -->\n");
-                break;
-
-            case 8:
-                console.log("Voce escolheu " + listaOpcoesMenu[7] + " -->\n");
-                break;
             
-            case 9:
+            case 6:
                 console.log("Saindo...");
                 return;
 
             default:
                 console.log("Opcao Invalida");
-                
                 break;
         }
     }
